@@ -21,30 +21,30 @@
             <!-- 選單 -->
             <div class="overflow-auto mt-3">
                 <div>
-                    <a href="./index.html" class="sidebar-link active">
+                    <a href="./index.html" class="sidebar-link">
                         <div class="px-4">
-                            <i class="bi bi-house-heart"></i>首頁
+                            <i class="bi bi-house-heart"></i><strong>首頁</strong>
                         </div>
                     </a>
                 </div>
                 <div>
-                    <a href="#menu-order" class="sidebar-link"data-bs-toggle="collapse">
+                    <a href="#menu-order" class="sidebar-link active"data-bs-toggle="collapse">
                         <div class="d-flex justify-content-between px-4">
                             <p class="mb-0">
-                                <i class="bi bi-music-note-list"></i>訂單管理
+                                <i class="bi bi-music-note-list"></i><strong>訂單管理</strong>
                             </p>
                             <i class="bi bi-caret-down"></i>
                         </div>
                     </a>
                     <div class="collapse" id="menu-order">
-                        <a href="./orders.html" class="sidebar-link">
+                        <a href="./orders.html" class="sidebar-link active">
                             <div class="ps-5">
-                                <i class="bi bi-list-check"></i>訂單列表
+                                <i class="bi bi-list-check"></i><strong>訂單列表</strong>
                             </div>
                         </a>
                         <a href="./order.html" class="sidebar-link">
                             <div class="ps-5">
-                                <i class="bi bi-file-earmark-music"></i>單一訂單細節
+                                <i class="bi bi-file-earmark-music"></i><strong>單一訂單細節</strong>
                             </div>
                         </a>
                     </div>
@@ -53,7 +53,7 @@
             <!-- 登出按鈕 -->
             <a href="#" class="mt-auto sidebar-link active">
                 <div class="px-4">
-                    <i class="bi bi-door-closed"></i>登出
+                    <i class="bi bi-door-closed"></i><strong>登出</strong>
                 </div>
             </a>
         </aside>
@@ -333,95 +333,6 @@
         </div>
       </main>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      (() => {
-        const chartColors = {
-          red: "rgb(255, 99, 132)",
-          orange: "rgb(255, 159, 64)",
-          yellow: "rgb(255, 205, 86)",
-          green: "rgb(75, 192, 192)",
-          blue: "rgb(54, 162, 235)",
-          purple: "rgb(153, 102, 255)",
-          grey: "rgb(201, 203, 207)",
-        };
-        var randomScalingFactor = function () {
-          return Math.round(Math.random() * 2000000);
-        };
-
-        const pieCtx = document.getElementById("pie-chart").getContext("2d");
-        const barCtx = document.getElementById("bar-chart").getContext("2d");
-
-        const config = {
-          type: "pie",
-          data: {
-            datasets: [
-              {
-                data: [
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                ],
-                backgroundColor: [
-                  chartColors.red,
-                  chartColors.orange,
-                  chartColors.yellow,
-                  chartColors.green,
-                  chartColors.blue,
-                ],
-                label: "Dataset 1",
-              },
-            ],
-            labels: [
-              "大麥克全餐",
-              "肥宅快樂水",
-              "太爽啦義大利麵",
-              "薯條加大吃不完",
-              "兒童餐椅不給坐",
-            ],
-          },
-          options: {
-            responsive: true,
-          },
-        };
-        const barConfig = {
-          type: "bar",
-          data: {
-            datasets: [
-              {
-                data: [
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                ],
-                backgroundColor: [
-                  chartColors.red,
-                  chartColors.orange,
-                  chartColors.yellow,
-                  chartColors.green,
-                  chartColors.blue,
-                  chartColors.purple,
-                ],
-                label: "Dataset 1",
-              },
-            ],
-            labels: ["一月", "二月", "三月", "四月", "五月", "六月"],
-          },
-          options: {
-            responsive: true,
-          },
-        };
-        const pieChart = new Chart(pieCtx, config);
-        const barChart = new Chart(barCtx, barConfig);
-      })();
-    </script>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
